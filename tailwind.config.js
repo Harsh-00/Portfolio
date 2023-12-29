@@ -18,8 +18,8 @@ export default {
 			screens: {
 				xs: "450px",
 			},
-			backImg: {
-				hero: "url('/src/assets/herobg.jpg')",
+			backgroundImage: {
+				hero: "url('./src/assets/herobg.png')",
 			},
 		},
 	},
