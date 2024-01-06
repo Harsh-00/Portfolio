@@ -9,16 +9,6 @@ const Navbar = () => {
 	const [hamburger, setHamburger] = useState(false);
 	return (
 		<nav className={`${styles.paddingX} w-full`}>
-			<Link
-				to="/"
-				onClick={() => {
-					setActive("");
-					window.scrollTo(0, 0);
-				}}
-			>
-				<img src={logo} className="w-9 h-9 object-contain" />
-			</Link>
-
 			<div className="max-xs:hidden mx-auto w-fit gap-2 flex">
 				{navLinks.map((item, idx) => {
 					return (
@@ -61,7 +51,7 @@ const Navbar = () => {
 							<Link
 								to={`#${item.id}`}
 								key={idx}
-								className={`hover:text-white hover:underline underline-offset-2  text-[14px]  font-medium cursor-pointer`}
+								className={`hover:text-white hover:underline underline-offset-2  text-[16px]  font-medium cursor-pointer`}
 								onClick={() => {
 									setActive(item.title);
 								}}
