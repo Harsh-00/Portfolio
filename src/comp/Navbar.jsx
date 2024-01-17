@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import styles from "../styles";
 import { Link } from "react-router-dom";
-import { logo, menu, close } from "../assets";
-import { navLinks } from "../constants";
+import { menu, close } from "../assets";
 
 const Navbar = () => {
+	const navLinks = [
+		{ title: "Home", id: "home" },
+		{ title: "About", id: "about" },
+		{ title: "Skills", id: "skills" },
+		{ title: "Projects", id: "projects" },
+		{ title: "Contact", id: "contact" },
+	];
+
 	const [active, setActive] = useState("");
 	const [hamburger, setHamburger] = useState(false);
 	return (

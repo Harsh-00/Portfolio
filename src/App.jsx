@@ -1,6 +1,8 @@
 import About from "./comp/About";
 import Hero from "./comp/Hero";
 import Navbar from "./comp/Navbar";
+import Projects from "./comp/Projects";
+import Skills from "./comp/Skills";
 import SpaceCanvas from "./comp/Space";
 const App = () => {
 	return (
@@ -10,6 +12,8 @@ const App = () => {
 				<Navbar />
 				<Hero />
 				<About />
+				<Skills />
+				<Projects />
 			</div>
 		</div>
 	);
