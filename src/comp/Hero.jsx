@@ -6,7 +6,7 @@ import EarthCanvas from "./Earth";
 
 const Hero = () => {
 	return (
-		<div className="relative w-full h-screen flex flex-row ">
+		<div className="relative w-full h-screen flex flex-row " id="home">
 			<div
 				className={`${styles.paddingX} flex flex-grow  justify-center items-center`}
 			>

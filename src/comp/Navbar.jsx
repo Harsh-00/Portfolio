@@ -15,12 +15,11 @@ const Navbar = () => {
 	const [active, setActive] = useState("");
 	const [hamburger, setHamburger] = useState(false);
 	return (
-		<nav className={`${styles.paddingX} w-full`}>
-			<div className="max-xs:hidden mx-auto w-fit gap-2 flex">
+		<nav className="px-5 fixed py-2 rounded-lg z-20 top-5 w-fit  backdrop-blur-2xl bg-blue-200 left-[50%] -translate-x-[50%]">
+			<div className="max-xs:hidden mx-auto w-fit gap-6 flex">
 				{navLinks.map((item, idx) => {
 					return (
-						<Link
-							to={`#${item.id}`}
+						<div
 							key={idx}
 							className={`${
 								active === item.title
@@ -31,8 +30,8 @@ const Navbar = () => {
 								setActive(item.title);
 							}}
 						>
-							{item.title}
-						</Link>
+							<a href={`#${item.id}`}>{item.title}</a>
+						</div>
 					);
 				})}
 			</div>

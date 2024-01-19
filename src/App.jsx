@@ -1,4 +1,5 @@
 import About from "./comp/About";
+import Contact from "./comp/Contact";
 import Hero from "./comp/Hero";
 import Navbar from "./comp/Navbar";
 import Projects from "./comp/Projects";
@@ -14,6 +15,7 @@ const App = () => {
 				<About />
 				<Skills />
 				<Projects />
+				<Contact />
 			</div>
 		</div>
 	);

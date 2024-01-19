@@ -7,7 +7,10 @@ import { LuGithub } from "react-icons/lu";
 
 const About = () => {
 	return (
-		<div className="text-white flex flex-col relative max-w-6xl mx-auto mt-16 pl-10 ">
+		<div
+			className="text-white flex flex-col relative max-w-6xl mx-auto mt-16 pl-10 "
+			id="about"
+		>
 			<div className="w-fit mx-auto text-6xl mb-16">About Me</div>
 			<div className="flex gap-28">
 				<img src={imagee} className="w-[250px] rounded-xl"></img>
