@@ -21,6 +21,9 @@ import git from "./tech/git.png";
 import github from "./tech/github.png";
 
 import project1 from "../assets/project-1.png";
+import project2 from "../assets/project-2.png";
+import project3 from "../assets/project-3.png";
+import project4 from "../assets/project-4.png";
 
 export {
 	menu,
@@ -112,21 +115,28 @@ export const projects = [
 	{
 		title: "Mobile Ordering Web App",
 		image: `${project1}`,
-		tech: ["React", "Tailwind"],
+		tech: ["ReactJs", "NodeJs", "ExpressJs", "MongoDB", "TailwindCSS"],
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.lor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
 	},
 	{
-		title: "Project 1",
-		image: `${project1}`,
-		tech: ["React", "Tailwind"],
+		title: "Harsh's Blogs",
+		image: `${project2}`,
+		tech: ["React", "ContextAPI", "TailwindCSS"],
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.lor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
 	},
 	{
-		title: "Project 1",
-		image: `${project1}`,
-		tech: ["React", "Tailwind"],
+		title: "ShopHub",
+		image: `${project3}`,
+		tech: ["React", "Redux Toolkit", "TailwindCSS"],
+		description:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.lor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+	},
+	{
+		title: "Razorpay UI",
+		image: `${project4}`,
+		tech: ["HTML", "TailwindCSS"],
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.lor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
 	},

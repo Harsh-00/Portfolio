@@ -5,9 +5,9 @@ import { icons, skill, skillColors } from "../assets";
 
 const Skills = () => {
 	return (
-		<div className="mt-32 max-w-4xl mx-auto" id="skills">
-			<div className="text-6xl w-fit mx-auto mb-16">Skills</div>
-			<div className="grid grid-cols-4 gap-10 ">
+		<div className="pt-20 mt-10 max-w-4xl mx-auto " id="skills">
+			<div className="text-6xl w-fit mx-auto mb-8">Skills</div>
+			<div className="grid grid-cols-4 gap-8 ">
 				{skill.map((s, idx) => {
 					return (
 						<motion.div
@@ -33,9 +33,7 @@ const Skills = () => {
 								e.currentTarget.style.border = `4px solid ${randomColor}`;
 							}}
 							onMouseLeave={(e) =>
-								(e.currentTarget.style.boxShadow = "")(
-									(e.currentTarget.style.textShadow = "")
-								)
+								(e.currentTarget.style.boxShadow = "")
 							}
 						>
 							<img

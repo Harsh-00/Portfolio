@@ -48,7 +48,7 @@ const Contact = () => {
 			});
 	};
 	return (
-		<div className="mt-32 max-w-5xl mx-auto" id="contact">
+		<div className="pt-32 max-w-5xl mx-auto" id="contact">
 			<motion.div
 				variants={slideIn("left", "tween", 0.2, 1)}
 				className="flex flex-col"

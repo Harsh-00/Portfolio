@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import styles from "../styles";
+
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { menu, close } from "../assets";
+import { skillColors } from "../assets";
 
 const Navbar = () => {
 	const navLinks = [
@@ -12,26 +14,40 @@ const Navbar = () => {
 		{ title: "Contact", id: "contact" },
 	];
 
-	const [active, setActive] = useState("");
 	const [hamburger, setHamburger] = useState(false);
 	return (
-		<nav className="px-5 fixed py-2 rounded-lg z-20 top-5 w-fit  backdrop-blur-2xl bg-blue-200 left-[50%] -translate-x-[50%]">
-			<div className="max-xs:hidden mx-auto w-fit gap-6 flex">
+		<nav className="fixed  z-20 top-6 w-fit     left-[50%] -translate-x-[50%] ">
+			<div className="max-xs:hidden bg-opacity-40 backdrop-filter  backdrop-blur-xl bg-[#181818] border rounded-lg border-white mx-auto w-fit flex">
 				{navLinks.map((item, idx) => {
 					return (
-						<div
+						<motion.div
 							key={idx}
-							className={`${
-								active === item.title
-									? "text-white"
-									: "text-secondary-200"
-							} hover:text-white text-[18px] font-medium cursor-pointer`}
-							onClick={() => {
-								setActive(item.title);
+							className="  text-white text-[18px] font-medium cursor-pointer border-4 border-transparent w-full h-full rounded-lg px-3 py-2 text-sm uppercase"
+							whileHover={{
+								scale: 1.1,
 							}}
+							whileTap={{ scale: 0.9 }}
+							transition={{
+								type: "spring",
+								stiffness: 500,
+								damping: 8,
+								duration: 0.2,
+							}}
+							onMouseEnter={(e) => {
+								const randomColor =
+									skillColors[
+										Math.floor(
+											Math.random() * skillColors.length
+										)
+									];
+								e.currentTarget.style.border = `4px solid ${randomColor}`;
+							}}
+							onMouseLeave={(e) =>
+								(e.currentTarget.style.border = "")
+							}
 						>
 							<a href={`#${item.id}`}>{item.title}</a>
-						</div>
+						</motion.div>
 					);
 				})}
 			</div>
