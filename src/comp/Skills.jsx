@@ -5,9 +5,9 @@ import { icons, skill, skillColors } from "../assets";
 
 const Skills = () => {
 	return (
-		<div className="pt-20 mt-10 max-w-4xl mx-auto " id="skills">
+		<div className="pt-20 mt-10 max-w-4xl mx-auto px-4 " id="skills">
 			<div className="text-6xl w-fit mx-auto mb-8">Skills</div>
-			<div className="grid grid-cols-4 gap-8 ">
+			<div className="grid grid-cols-4 px-6  gap-8 max-md:grid-cols-3 max-sm:grid-cols-2 max-xs:grid-cols-1 ">
 				{skill.map((s, idx) => {
 					return (
 						<motion.div

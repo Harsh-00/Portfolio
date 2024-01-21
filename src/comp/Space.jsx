@@ -6,7 +6,7 @@ import * as random from "maath/random/dist/maath-random.esm";
 
 const Space = (props) => {
 	const ref = useRef();
-	const sphere = random.inSphere(new Float32Array(15000), { radius: 1.2 });
+	const sphere = random.inSphere(new Float32Array(8000), { radius: 1.2 });
 
 	useFrame((state, delta) => {
 		ref.current.rotation.x -= delta / 20;
@@ -25,7 +25,7 @@ const Space = (props) => {
 				<PointMaterial
 					transparent
 					color="#ffffff"
-					size={0.001}
+					size={0.002}
 					sizeAttenuation={true}
 					depthWrite={false}
 				/>
@@ -36,7 +36,7 @@ const Space = (props) => {
 
 const StartCanvase = () => {
 	return (
-		<div className="absolute w-full h-full inset-0 bg-[#000000] -z-10 ">
+		<div className="fixed w-full h-full inset-0 bg-[#000000] -z-10 ">
 			<Canvas camera={{ position: [0, 0, 1] }}>
 				<Suspense fallback={null}>
 					<Space />

@@ -22,7 +22,7 @@ const Card = ({ project }) => {
 				<p className="text-white opacity-70 mb-6 text-sm font-thin mt-4 ">
 					{project.description}
 				</p>
-				<div className="flex justify-evenly items-center gap-8">
+				<div className="flex  justify-evenly items-center gap-x-8 gap-y-6 px-4 max-md:flex-wrap">
 					<motion.div
 						className="bg-white text-black px-4 rounded-lg flex justify-center items-center gap-3 border-4 border-white select-none cursor-pointer py-2 w-full "
 						whileHover={{

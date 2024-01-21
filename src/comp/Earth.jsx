@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { Suspense } from "react";
-
 const Earth = () => {
+	const [scalee, setScalee] = useState(1.5);
+
+	useEffect(() => {
+		window.addEventListener("resize", () => {
+			if (window.innerWidth < 1000) {
+				setScalee(1.3);
+			} else {
+				setScalee(1.5);
+			}
+		});
+	});
+
 	const earth = useGLTF("./planet/scene.gltf");
-	return <primitive object={earth.scene} scale={1.3} />;
+
+	return <primitive object={earth.scene} scale={scalee} />;
 };
 
 const EarthCanvas = () => {
 	return (
-		<div className="relative min-w-[770px]">
+		//min-w-[770px]
+		<div className="relative w-full h-full  ">
 			<Canvas
 				shadows
 				frameloop="demand"

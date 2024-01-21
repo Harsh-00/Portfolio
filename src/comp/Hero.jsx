@@ -6,9 +6,12 @@ import EarthCanvas from "./Earth";
 
 const Hero = () => {
 	return (
-		<div className="relative w-full h-screen flex flex-row " id="home">
+		<div
+			className="relative w-full h-screen flex justify-center items-center flex-row  max-md:flex-col max-md:pt-[180px] max-md:text  overflow-x-hidden overflow-y-hidden  "
+			id="home"
+		>
 			<div
-				className={`${styles.paddingX} flex flex-grow  justify-center items-center`}
+				className={`${styles.paddingX} flex flex-grow  justify-center  items-center max-h-[300px] max-md:w-full max-sm:max-h-[400px]  `}
 			>
 				<div className="flex flex-col justify-center items-center">
 					<div
@@ -28,9 +31,11 @@ const Hero = () => {
 			</div>
 
 			{/* <ComputerCanvas /> */}
-			<EarthCanvas />
+			<div className=" h-full w-[55%]  max-w-[1200px] max-h-[700px] max-md:w-full max-xs:max-h-[500px] pb-10  ">
+				<EarthCanvas />
+			</div>
 
-			<div className="absolute bottom-20 w-full h-5 flex  justify-center items-center">
+			<div className="absolute bottom-20 w-full h-5 flex  justify-center items-center max-md:hidden">
 				<a
 					href="#about"
 					className="w-[35px] h-[65px] rounded-3xl border-4 border-secondary-100 inline-flex justify-center items-start p-2"

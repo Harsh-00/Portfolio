@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion";
 import toast from "react-hot-toast";
 
+import { IoSend } from "react-icons/io5";
+
 const Contact = () => {
 	const formRef = useRef();
 	const [form, setForm] = useState({
@@ -20,6 +22,13 @@ const Contact = () => {
 	};
 	const SubmitHandler = (e) => {
 		e.preventDefault();
+
+		//checking for email input
+		if (!form.email) {
+			toast.error("Please Enter Your Email");
+			return;
+		}
+
 		console.log("INNN");
 		emaijs
 			.send(
@@ -48,7 +57,7 @@ const Contact = () => {
 			});
 	};
 	return (
-		<div className="pt-32 max-w-5xl mx-auto" id="contact">
+		<div className="pt-28 pb-12 max-w-5xl mx-auto" id="contact">
 			<motion.div
 				variants={slideIn("left", "tween", 0.2, 1)}
 				className="flex flex-col"
@@ -81,6 +90,7 @@ const Contact = () => {
 								onChange={ChangeHandler}
 								placeholder="Enter Your Email"
 								className="mt-1 rounded-lg p-2 placeholder:opacity-50 w-full"
+								required
 							/>
 						</label>
 
@@ -96,13 +106,27 @@ const Contact = () => {
 							/>
 						</label>
 
-						<button
+						<motion.button
 							type="submit"
 							onClick={SubmitHandler}
-							className="text-white rounded-xl"
+							className="text-black rounded-2xl bg-white w-fit px-4 py-2 mx-auto font-semibold text-xl border-4 border-transparent flex gap-3 justify-center items-center"
+							whileTap={{ scale: 0.9 }}
+							whileHover={{
+								scale: 1.1,
+								color: "white",
+								background: "transparent",
+								borderColor: "white",
+							}}
+							transition={{
+								type: "spring",
+								stiffness: 500,
+								damping: 8,
+								duration: 0.2,
+							}}
 						>
+							<IoSend className="text-xl" />
 							Send
-						</button>
+						</motion.button>
 					</form>
 				</div>
 			</motion.div>

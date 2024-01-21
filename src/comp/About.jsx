@@ -28,19 +28,19 @@ const About = () => {
 
 	return (
 		<div
-			className="text-white flex flex-col relative max-w-6xl mx-auto pt-28 pl-10 "
+			className="text-white flex flex-col relative max-w-6xl mx-auto pt-28 px-6 "
 			id="about"
 		>
 			<div className="w-fit mx-auto text-6xl mb-24">About Me</div>
-			<div className="flex gap-28">
-				<img src={imagee} className="w-[250px] rounded-xl"></img>
+			<div className="flex gap-x-28 gap-y-16 justify-center items-center max-md:flex-col">
+				<img src={imagee} className="w-[250px] rounded-xl ml-6"></img>
 
-				<div className="flex justify-center items-center text-xl tracking-wider flex-col gap-8 ">
+				<div className="flex justify-center items-center text-xl tracking-wider flex-col gap-10 text-center  ">
 					I am currently a third-year B.Tech student majoring in
 					Computer Science and Engineering at IIIT, Kota. I am a
 					results-driven Software Developer, full-stack web developer.
 					<br />I bring ideas to life through code.
-					<div className="flex-row w-full pl-36 flex gap-10">
+					<div className="flex-row w-full flex gap-10 justify-center items-center">
 						{socials.map((social) => {
 							return (
 								<motion.div
