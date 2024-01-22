@@ -74,11 +74,11 @@ export const icons = [
 export const skill = [
 	"HTML",
 	"CSS",
-	"JS",
+	"JavaScript",
 	"React",
 	"Redux",
-	"Node",
-	"Express",
+	"NodeJS",
+	"ExpressJS",
 	"MongoDB",
 	"MaterialUI",
 	"TailwindCSS",
@@ -86,8 +86,8 @@ export const skill = [
 	"Algorithms",
 	"C",
 	"C++",
-	"NextJs",
-	"VueJs",
+	"NextJS",
+	"VueJS",
 	"Python",
 	"Git",
 	"Github",
@@ -111,34 +111,50 @@ export const skillColors = [
 	"rgb(244, 63, 94)",
 ];
 
+export const navLinks = [
+	{ title: "Home", id: "home" },
+	{ title: "About", id: "about" },
+	{ title: "Skills", id: "skills" },
+	{ title: "Projects", id: "projects" },
+	{ title: "Contact", id: "contact" },
+];
+
 export const projects = [
 	{
 		title: "Mobile Ordering Web App",
 		image: `${project1}`,
 		tech: ["ReactJs", "NodeJs", "ExpressJs", "MongoDB", "TailwindCSS"],
 		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.lor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+			"Lists Mobile entries by retrieving data from the server. Implemented Server-side Dynamic Filtering logic enhances the user experience. Users can Add mobile entries, ensuring continuous updates to the Database.",
+		github: "https://github.com/Harsh-00/Mobile_Ordering_front",
+		link: "https://mobile-ordering-front.vercel.app/",
 	},
 	{
 		title: "Harsh's Blogs",
 		image: `${project2}`,
 		tech: ["React", "ContextAPI", "TailwindCSS"],
 		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.lor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+			"The Blog website project integrates an external API to fetch data. The implementation of a pagination feature ensures organized presentation. Using Context API for efficient state management. Users can explore content category-wise or based on tags.",
+		github: "https://github.com/Harsh-00/Deploy_Blog_Website",
+		link: "https://react-blog-webpage.netlify.app/",
 	},
 	{
 		title: "ShopHub",
 		image: `${project3}`,
 		tech: ["React", "Redux Toolkit", "TailwindCSS"],
 		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.lor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+			"The website utilizes an External API to dynamically list items, allowing users to add them to a shopping cart. The cart displays the total amount and quantity of selected items, with the ability to easily remove items. To ensure efficient state management, Redux Toolkit is implemented",
+		github: "https://github.com/Harsh-00/Deploy_Redux_Cart",
+		link: "https://react-cartt-redux.netlify.app/",
 	},
 	{
 		title: "Razorpay UI",
 		image: `${project4}`,
 		tech: ["HTML", "TailwindCSS"],
 		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.lor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+			"The website, a UI clone of Razorpay, is predominantly crafted using Tailwind CSS, showcasing its effective use in design across projects. The extensive utilization of Tailwind CSS ensures a fully responsive and visually appealing user interface.",
+		github: "https://github.com/Harsh-00/tailwind",
+		link: "https://tailwind-razorpay-clone.netlify.app/",
 	},
 ];
 export const techColors = [

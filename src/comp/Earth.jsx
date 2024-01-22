@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Suspense } from "react";
 const Earth = () => {
 	const [scalee, setScalee] = useState(1.5);
@@ -23,7 +23,6 @@ const Earth = () => {
 
 const EarthCanvas = () => {
 	return (
-		//min-w-[770px]
 		<div className="relative w-full h-full  ">
 			<Canvas
 				shadows

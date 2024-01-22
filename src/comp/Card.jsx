@@ -6,14 +6,22 @@ import { motion } from "framer-motion";
 
 const Card = ({ project }) => {
 	return (
-		<div className="max-w-[430px] mx-auto rounded-lg shadow-lg">
-			<img src={project.image} className="rounded-lg" alt="" />
+		<motion.div
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			transition={{
+				duration: 1,
+				type: "linear",
+			}}
+			className="max-w-[430px] mx-auto rounded-lg shadow-lg"
+		>
+			<img loading="lazy" src={project.image} className="rounded-lg" alt="" />
 			<div className="pr-2 py-8">
 				<h2 className="text-3xl font-bold mb-1 ">{project.title}</h2>
 				<div className="flex gap-x-3 flex-wrap">
 					{project.tech.map((tech, idx) => {
 						return (
-							<span className={`${techColors[idx]}   `}>
+							<span key={idx} className={`${techColors[idx]}   `}>
 								#{tech}
 							</span>
 						);
@@ -23,7 +31,9 @@ const Card = ({ project }) => {
 					{project.description}
 				</p>
 				<div className="flex  justify-evenly items-center gap-x-8 gap-y-6 px-4 max-md:flex-wrap">
-					<motion.div
+					<motion.a
+						href={project.link}
+						target="_blank"
 						className="bg-white text-black px-4 rounded-lg flex justify-center items-center gap-3 border-4 border-white select-none cursor-pointer py-2 w-full "
 						whileHover={{
 							scale: 1.1,
@@ -46,8 +56,10 @@ const Card = ({ project }) => {
 					>
 						<FaLink className="text-xl" />
 						Live Link
-					</motion.div>
-					<motion.div
+					</motion.a>
+					<motion.a
+						href={project.github}
+						target="_blank"
 						className="bg-white text-black px-4 rounded-lg flex justify-center items-center gap-3 border-4 border-white select-none cursor-pointer py-2 w-full"
 						whileHover={{
 							scale: 1.1,
@@ -70,10 +82,10 @@ const Card = ({ project }) => {
 					>
 						<FaGithub className="text-xl" />
 						Github
-					</motion.div>
+					</motion.a>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

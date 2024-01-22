@@ -1,12 +1,17 @@
 import React from "react";
 import styles from "../styles";
-import ComputerCanvas from "./ComputerCanvas";
 import { motion } from "framer-motion";
 import EarthCanvas from "./Earth";
 
 const Hero = () => {
 	return (
-		<div
+		<motion.div
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			transition={{
+				duration: 1,
+				type: "linear",
+			}}
 			className="relative w-full h-screen flex justify-center items-center flex-row  max-md:flex-col max-md:pt-[180px] max-md:text  overflow-x-hidden overflow-y-hidden  "
 			id="home"
 		>
@@ -22,15 +27,13 @@ const Hero = () => {
 				</div>
 				<div className={`${styles.heroHeadText} pl-12`}>
 					Hi, I'm <br />
-					{/* &nbsp; */}
 					<span className="text-violet-400">Harsh Agarwal</span>
 					<p className={`${styles.heroSubText} mt-2`}>
-						Skilled in Full stack Development
+						Skilled in Development
 					</p>
 				</div>
 			</div>
 
-			{/* <ComputerCanvas /> */}
 			<div className=" h-full w-[55%]  max-w-[1200px] max-h-[700px] max-md:w-full max-xs:max-h-[500px] pb-10  ">
 				<EarthCanvas />
 			</div>
@@ -51,7 +54,7 @@ const Hero = () => {
 					/>
 				</a>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

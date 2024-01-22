@@ -10,19 +10,19 @@ const About = () => {
 	const socials = [
 		{
 			icon: <FaXTwitter />,
-			link: "https://twitter.com/",
+			link: "https://twitter.com/Harsh_Agarwal00",
 		},
 		{
 			icon: <FaLinkedinIn />,
-			link: "https://twitter.com/",
+			link: "https://www.linkedin.com/in/iharsh-agarwal/",
 		},
 		{
 			icon: <LuGithub className="text-xl" />,
-			link: "https://twitter.com/",
+			link: "https://github.com/Harsh-00",
 		},
 		{
 			icon: <IoIosMail />,
-			link: "https://twitter.com/",
+			link: "mailto:2021kucp1011@iiitkota.ac.in",
 		},
 	];
 
@@ -32,18 +32,38 @@ const About = () => {
 			id="about"
 		>
 			<div className="w-fit mx-auto text-6xl mb-24">About Me</div>
-			<div className="flex gap-x-28 gap-y-16 justify-center items-center max-md:flex-col">
-				<img src={imagee} className="w-[250px] rounded-xl ml-6"></img>
+			<motion.div
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{
+					duration: 1,
+					type: "linear",
+				}}
+				className="flex gap-x-28 gap-y-16 justify-center items-center max-md:flex-col"
+			>
+				<img
+					loading="lazy"
+					src={imagee}
+					className="w-[250px] rounded-xl ml-6"
+				></img>
 
-				<div className="flex justify-center items-center text-xl tracking-wider flex-col gap-10 text-center  ">
-					I am currently a third-year B.Tech student majoring in
-					Computer Science and Engineering at IIIT, Kota. I am a
-					results-driven Software Developer, full-stack web developer.
-					<br />I bring ideas to life through code.
+				<span className="flex justify-center items-center text-xl tracking-wider flex-col gap-10 text-center  ">
+					<span>
+						I am currently a{" "}
+						<span className="text-purple-500">Pre Final year</span>{" "}
+						B.Tech student majoring in Computer Science and
+						Engineering (CSE) at{" "}
+						<span className="uppercase text-green-500">
+							IIIT, Kota
+						</span>{" "}
+						. I am a results-driven Software Developer, full-stack
+						web developer.I bring ideas to life through code.
+					</span>
 					<div className="flex-row w-full flex gap-10 justify-center items-center">
-						{socials.map((social) => {
+						{socials.map((social, idx) => {
 							return (
 								<motion.div
+									key={idx}
 									className="bg-transparent p-3 rounded-lg border-4 border-white select-none cursor-pointer fill-white "
 									whileHover={{
 										scale: 1.2,
@@ -63,13 +83,15 @@ const About = () => {
 										(e.currentTarget.style.boxShadow = "")()
 									}
 								>
-									<a href={social.link}>{social.icon}</a>
+									<a href={social.link} target="_blank">
+										{social.icon}
+									</a>
 								</motion.div>
 							);
 						})}
 					</div>
-				</div>
-			</div>
+				</span>
+			</motion.div>
 		</div>
 	);
 };

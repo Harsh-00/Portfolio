@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import emaijs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { slideIn } from "../utils/motion";
 import toast from "react-hot-toast";
 
 import { IoSend } from "react-icons/io5";
@@ -30,36 +29,43 @@ const Contact = () => {
 		}
 
 		console.log("INNN");
-		emaijs
-			.send(
-				"service_3xeyfla",
-				"template_a5gx0nz",
-				{
-					from_name: form.namee,
-					to_name: "Harsh Agarwal",
-					from_email: form.email,
-					to_email: "2021Kucp1011@iiitkota.ac.in",
-					message: form.message,
-				},
-				"mIuyUINfwI5AUkMlV"
-			)
-			.then(() => {
-				toast.success("Sent Successfully");
-				setForm({
-					name: "",
-					email: "",
-					message: "",
-				});
-			})
-			.error((err) => {
-				console.log(err);
-				toast.error("Try Again Later");
-			});
+		toast.promise(
+			emaijs
+				.send(
+					"service_3xeyfla",
+					"template_a5gx0nz",
+					{
+						from_name: form.namee,
+						to_name: "Harsh Agarwal",
+						from_email: form.email,
+						to_email: "2021Kucp1011@iiitkota.ac.in",
+						message: form.message,
+					},
+					"mIuyUINfwI5AUkMlV"
+				)
+				.then(() => {
+					setForm({
+						namee: "",
+						email: "",
+						message: "",
+					});
+				}),
+			{
+				loading: "Sending",
+				success: "Sent Successfully",
+				error: "Try Again Later",
+			}
+		);
 	};
 	return (
 		<div className="pt-28 pb-12 max-w-5xl mx-auto" id="contact">
 			<motion.div
-				variants={slideIn("left", "tween", 0.2, 1)}
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{
+					duration: 1,
+					type: "linear",
+				}}
 				className="flex flex-col"
 			>
 				<h1 className="text-6xl w-fit mx-auto mb-16">Contact Me</h1>

@@ -4,16 +4,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { menu, close } from "../assets";
 import { skillColors } from "../assets";
+import { navLinks } from "../assets";
 
 const Navbar = () => {
-	const navLinks = [
-		{ title: "Home", id: "home" },
-		{ title: "About", id: "about" },
-		{ title: "Skills", id: "skills" },
-		{ title: "Projects", id: "projects" },
-		{ title: "Contact", id: "contact" },
-	];
-
 	const [hamburger, setHamburger] = useState(false);
 	return (
 		<div>
@@ -24,7 +17,7 @@ const Navbar = () => {
 						return (
 							<motion.div
 								key={idx}
-								className="  text-white text-[18px] font-medium cursor-pointer border-4 border-transparent w-full h-full rounded-lg px-3 py-2 text-sm uppercase"
+								className="  text-white text-[18px] font-medium cursor-pointer border-4 border-transparent w-full h-full rounded-lg px-2 py-2 text-sm uppercase"
 								whileHover={{
 									scale: 1.1,
 								}}
@@ -63,6 +56,7 @@ const Navbar = () => {
 					}}
 				>
 					<motion.img
+						loading="lazy"
 						whileHover={{
 							scale: 1.2,
 							background: "transparent",

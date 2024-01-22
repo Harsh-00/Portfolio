@@ -9,7 +9,6 @@ const App = () => {
 	return (
 		<div className="relative h-full overflow-x-hidden ">
 			<SpaceCanvas />
-			{/* //max-w-7xl */}
 			<div className=" mx-auto ">
 				<Navbar />
 				<Hero />
