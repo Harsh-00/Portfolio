@@ -20,10 +20,10 @@ const Hero = () => {
 			>
 				<div className="flex flex-col justify-center items-center">
 					<div
-						className="bg-violet-600 w-5 h-5 rounded-full
+						className="bg-violet-500 w-5 h-5 rounded-full
                     "
 					></div>
-					<div className="w-1 h-60 sm:h-80 bg-violet-500"></div>
+					<div className="w-1 h-60 sm:h-80  bg-gradient-to-b from-violet-600 to-transparent"></div>
 				</div>
 				<div className={`${styles.heroHeadText} pl-12`}>
 					Hi, I'm <br />

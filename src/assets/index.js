@@ -125,7 +125,7 @@ export const projects = [
 		image: `${project1}`,
 		tech: ["ReactJs", "NodeJs", "ExpressJs", "MongoDB", "TailwindCSS"],
 		description:
-			"Lists Mobile entries by retrieving data from the server. Implemented Server-side Dynamic Filtering logic enhances the user experience. Users can Add mobile entries, ensuring continuous updates to the Database.",
+			"Lists Mobile entries by retrieving data from the server. Implemented Server-side Dynamic Filtering logic enhances the user experience. Users can Add mobile entries, ensuring continuous updation to the Database.",
 		github: "https://github.com/Harsh-00/Mobile_Ordering_front",
 		link: "https://mobile-ordering-front.vercel.app/",
 	},
@@ -134,7 +134,7 @@ export const projects = [
 		image: `${project2}`,
 		tech: ["React", "ContextAPI", "TailwindCSS"],
 		description:
-			"The Blog website project integrates an external API to fetch data. The implementation of a pagination feature ensures organized presentation. Using Context API for efficient state management. Users can explore content category-wise or based on tags.",
+			"Blog website that integrates an external API to fetch data. The implementation of a pagination feature ensures organized presentation. Use Context API for efficient State Management. Users can explore content category-wise or based on tags.",
 		github: "https://github.com/Harsh-00/Deploy_Blog_Website",
 		link: "https://react-blog-webpage.netlify.app/",
 	},
@@ -152,7 +152,7 @@ export const projects = [
 		image: `${project4}`,
 		tech: ["HTML", "TailwindCSS"],
 		description:
-			"The website, a UI clone of Razorpay, is predominantly crafted using Tailwind CSS, showcasing its effective use in design across projects. The extensive utilization of Tailwind CSS ensures a fully responsive and visually appealing user interface.",
+			"UI clone of Razorpay, predominantly crafted using Tailwind CSS, showcasing its effective use in design across projects. The extensive utilization of Tailwind CSS ensures a fully responsive and visually appealing user interface. Used HTML for structuring the page",
 		github: "https://github.com/Harsh-00/tailwind",
 		link: "https://tailwind-razorpay-clone.netlify.app/",
 	},
