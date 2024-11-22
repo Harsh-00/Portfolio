@@ -50,7 +50,7 @@ const About = () => {
 				<span className="flex justify-center items-center text-xl tracking-wider flex-col gap-10 text-center  ">
 					<span>
 						I am currently a{" "}
-						<span className="text-purple-500">Pre Final year</span>{" "}
+						<span className="text-purple-500">Final year</span>{" "}
 						B.Tech student majoring in Computer Science and
 						Engineering (CSE) at{" "}
 						<span className="uppercase text-green-500">
