@@ -1,5 +1,6 @@
 import About from "./comp/About";
 import Contact from "./comp/Contact";
+import Experience from "./comp/Experience";
 import Hero from "./comp/Hero";
 import Navbar from "./comp/Navbar";
 import Projects from "./comp/Projects";
@@ -13,7 +14,8 @@ const App = () => {
 				<Navbar />
 				<Hero />
 				<About />
-				<Skills />
+				<Skills /> 
+				<Experience />
 				<Projects />
 				<Contact />
 			</div>

@@ -19,11 +19,17 @@ import vuejs from "./tech/vue.png";
 import python from "./tech/python.png";
 import git from "./tech/git.png";
 import github from "./tech/github.png";
+import postgreSQL from "./tech/postgreSQL.png";
+import Sql from "./tech/SQL.png";
+import azure from "./tech/azure.png";
+import framer from "./tech/framer.svg";
+
 
 import project1 from "../assets/project-1.png";
 import project2 from "../assets/project-2.png";
 import project3 from "../assets/project-3.png";
 import project4 from "../assets/project-4.png";
+import { t } from "maath/dist/misc-19a3ec46.esm";
 
 export {
 	menu,
@@ -47,6 +53,10 @@ export {
 	python,
 	git,
 	github,
+	postgreSQL,
+	Sql,
+	azure,
+	framer,
 };
 
 export const icons = [
@@ -69,6 +79,10 @@ export const icons = [
 	python,
 	git,
 	github,
+	postgreSQL,
+	Sql,
+	azure,
+	framer,
 ];
 
 export const skill = [
@@ -91,6 +105,10 @@ export const skill = [
 	"Python",
 	"Git",
 	"Github",
+	"postgreSQL",
+	"SQL",
+	"Azure",
+	"Framer Motion",
 ];
 export const skillColors = [
 	"rgb(239, 68, 68)",
@@ -119,15 +137,33 @@ export const navLinks = [
 	{ title: "Contact", id: "contact" },
 ];
 
+export const experience = [
+    {
+        company: "Zyod Commerce",
+        title: "Tech Intern",
+		type: "Remote",
+        duration: "March 2024 - April 2024",
+        desc: [
+            " • Enhanced the Enterprise Resource Planning (ERP) module by creating interactive and dynamic digital reports.",
+            " • Designed complex SQL queries to manipulate data efficiently and integrated them into the ERP module to facilitate real-time data retrieval.",
+            " • Tested and optimized these queries using pgAdmin before integration, reducing data retrieval times by 25%.",
+            " • Designed and implemented advanced filtering features in the backend using query parameters, which enable users to filter data dynamically and reduce API call time by up to 50%.",
+            " • Developed and deployed decisive reports using Metabase, presenting data in both tabular and graphical formats.",
+        ],
+        tech: ["Next.js", "Node.js", "PostgreSQL", "pgAdmin", "Metabase"],
+        certificate: "https://drive.google.com/file/d/1rCf5junG2TLT8eBJGW3wGpqRhQ2lt49k/view",
+    },
+];
+
 export const projects = [
 	{
-		title: "Mobile Ordering Web App",
+		title: "MobiMart",
 		image: `${project1}`,
-		tech: ["ReactJs", "NodeJs", "ExpressJs", "MongoDB", "TailwindCSS"],
+		tech: ["ReactJs", "NodeJs", "ExpressJs","TailwindCSS", "MongoDB","Stripe API","Azure" ],
 		description:
 			"Lists Mobile entries by retrieving data from the server. Implemented Server-side Dynamic Filtering logic enhances the user experience. Users can Add mobile entries, ensuring continuous updation to the Database.",
 		github: "https://github.com/Harsh-00/Mobile_Ordering_front",
-		link: "https://mobile-ordering-front.vercel.app/",
+		link: "https://thankful-hill-0e7a04d00.5.azurestaticapps.net/",
 	},
 	{
 		title: "Harsh's Blogs",
@@ -138,24 +174,24 @@ export const projects = [
 		github: "https://github.com/Harsh-00/Deploy_Blog_Website",
 		link: "https://react-blog-webpage.netlify.app/",
 	},
-	{
-		title: "ShopHub",
-		image: `${project3}`,
-		tech: ["React", "Redux Toolkit", "TailwindCSS"],
-		description:
-			"The website utilizes an External API to dynamically list items, allowing users to add them to a shopping cart. The cart displays the total amount and quantity of selected items, with the ability to easily remove items. To ensure efficient state management, Redux Toolkit is implemented",
-		github: "https://github.com/Harsh-00/Deploy_Redux_Cart",
-		link: "https://react-cartt-redux.netlify.app/",
-	},
-	{
-		title: "Razorpay UI",
-		image: `${project4}`,
-		tech: ["HTML", "TailwindCSS"],
-		description:
-			"UI clone of Razorpay, predominantly crafted using Tailwind CSS, showcasing its effective use in design across projects. The extensive utilization of Tailwind CSS ensures a fully responsive and visually appealing user interface. Used HTML for structuring the page",
-		github: "https://github.com/Harsh-00/tailwind",
-		link: "https://tailwind-razorpay-clone.netlify.app/",
-	},
+	// {
+	// 	title: "ShopHub",
+	// 	image: `${project3}`,
+	// 	tech: ["React", "Redux Toolkit", "TailwindCSS"],
+	// 	description:
+	// 		"The website utilizes an External API to dynamically list items, allowing users to add them to a shopping cart. The cart displays the total amount and quantity of selected items, with the ability to easily remove items. To ensure efficient state management, Redux Toolkit is implemented",
+	// 	github: "https://github.com/Harsh-00/Deploy_Redux_Cart",
+	// 	link: "https://react-cartt-redux.netlify.app/",
+	// },
+	// {
+	// 	title: "Razorpay UI",
+	// 	image: `${project4}`,
+	// 	tech: ["HTML", "TailwindCSS"],
+	// 	description:
+	// 		"UI clone of Razorpay, predominantly crafted using Tailwind CSS, showcasing its effective use in design across projects. The extensive utilization of Tailwind CSS ensures a fully responsive and visually appealing user interface. Used HTML for structuring the page",
+	// 	github: "https://github.com/Harsh-00/tailwind",
+	// 	link: "https://tailwind-razorpay-clone.netlify.app/",
+	// },
 ];
 export const techColors = [
 	"text-green-500",
