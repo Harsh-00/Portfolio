@@ -27,8 +27,7 @@ const Contact = () => {
 			toast.error("Please Enter Your Email");
 			return;
 		}
-
-		console.log("INNN");
+ 
 		toast.promise(
 			emaijs
 				.send(
@@ -58,7 +57,7 @@ const Contact = () => {
 		);
 	};
 	return (
-		<div className="pt-28 pb-12 max-w-5xl mx-auto" id="contact">
+		<div className="pt-28 pb-12 max-w-5xl mx-auto max-xs:text-sm" id="contact">
 			<motion.div
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}

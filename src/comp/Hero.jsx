@@ -12,7 +12,7 @@ const Hero = () => {
 				duration: 1,
 				type: "linear",
 			}}
-			className="relative w-full h-screen flex justify-center items-center flex-row  max-md:flex-col max-md:pt-[180px] max-md:text  overflow-x-hidden overflow-y-hidden  "
+			className="relative w-full h-screen flex justify-center items-center flex-row  max-md:flex-col max-md:pt-[140px] max-md:text max-xs:h-fit  overflow-x-hidden overflow-y-hidden  "
 			id="home"
 		>
 			<div
@@ -34,7 +34,7 @@ const Hero = () => {
 				</div>
 			</div>
 
-			<div className=" h-full w-[55%]  max-w-[1200px] max-h-[700px] max-md:w-full max-xs:max-h-[500px] pb-10  ">
+			<div className=" h-full w-[55%]  max-w-[1200px] max-h-[700px] max-md:w-full max-xs:hidden pb-10  ">
 				<EarthCanvas />
 			</div>
 

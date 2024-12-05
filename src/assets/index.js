@@ -133,6 +133,7 @@ export const navLinks = [
 	{ title: "Home", id: "home" },
 	{ title: "About", id: "about" },
 	{ title: "Skills", id: "skills" },
+	{ title: "Experience", id: "exp" },
 	{ title: "Projects", id: "projects" },
 	{ title: "Contact", id: "contact" },
 ];

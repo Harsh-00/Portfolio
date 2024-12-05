@@ -5,11 +5,11 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Experience = () => {
     return (
-        <div className="min-h-screen w-full flex flex-col items-center justify-center bg-transparent relative overflow-hidden mt-20">
+        <div className="min-h-screen w-full flex flex-col items-center justify-center bg-transparent relative overflow-hidden mt-20" id="exp">
             <h1 className="text-6xl w-fit mx-auto mb-10">Experience</h1>
 
             <div className="max-w-4xl w-full px-4 z-10">
-                <div className="relative">
+                <div className="relative ">
                     {experience.map((exp, idx) => {
                         return (
                             <motion.div
@@ -29,11 +29,11 @@ const Experience = () => {
                                         <h3 className="text-2xl font-bold text-white">
                                             {exp.company}
                                         </h3>
-                                        <div className="flex flex-col items-end">
+                                        <div className="flex flex-col items-end -mb-6">
                                             <span className="text-purple-400">
                                                 {exp.duration}
                                             </span>
-                                            <span className="text-sm text-purple-300 mt-1 flex items-center">
+                                            <span className="text-sm text-white mt-1 flex items-center">
                                                 ( {exp.type} )
                                             </span>
                                         </div>
@@ -41,7 +41,7 @@ const Experience = () => {
                                     <h4 className="text-xl text-purple-300 mb-4">
                                         {exp.title}
                                     </h4>
-                                    <ul className="text-gray-300 space-y-2">
+                                    <ul className="text-gray-300 space-y-2 text-sm">
                                         {exp.desc.map((des) => {
                                             return <li>{des}</li>;
                                         })}
@@ -62,7 +62,7 @@ const Experience = () => {
                                         href={exp.certificate}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center mt-6 px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors duration-300"
+                                        className="inline-flex items-center mt-6 px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 text-sm"
                                     >
                                         View Certificate{" "}
                                         <FaExternalLinkAlt className="ml-2" />

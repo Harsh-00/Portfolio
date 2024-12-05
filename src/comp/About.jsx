@@ -28,7 +28,7 @@ const About = () => {
 
 	return (
 		<div
-			className="text-white flex flex-col relative max-w-6xl mx-auto pt-28 px-6 "
+			className="text-white flex flex-col relative max-w-6xl mx-auto pt-28 px-6 max-xs:mt-28 "
 			id="about"
 		>
 			<div className="w-fit mx-auto text-6xl mb-24">About Me</div>
@@ -44,11 +44,11 @@ const About = () => {
 				<img
 					loading="lazy"
 					src={imagee}
-					className="w-[250px] rounded-xl ml-6"
+					className="w-[250px] rounded-xl ml-6 max-xs:w-[180px]"
 				></img>
 
 				<span className="flex justify-center items-center text-xl tracking-wider flex-col gap-10 text-center  ">
-					<span>
+					<span className="max-xs:text-sm">
 						I am currently a{" "}
 						<span className="text-purple-500">Final year</span>{" "}
 						B.Tech student majoring in Computer Science and
@@ -59,14 +59,14 @@ const About = () => {
 						. I am a results-driven Software Developer, full-stack
 						web developer.I bring ideas to life through code.
 					</span>
-					<div className="flex-row w-full flex gap-10 justify-center items-center">
+					<div className="flex-row w-full flex gap-10 justify-center items-center ">
 						{socials.map((social, idx) => {
 							return (
 								<motion.div
 									key={idx}
-									className="bg-transparent p-3 rounded-lg border-4 border-white select-none cursor-pointer fill-white "
+									className="bg-transparent p-4 max-xs:p-2  border-2 border-white select-none cursor-pointer fill-white  "
 									whileHover={{
-										scale: 1.2,
+										scale: 1.18,
 										background: "transparent",
 									}}
 									whileTap={{ scale: 0.9 }}
@@ -77,13 +77,13 @@ const About = () => {
 										duration: 0.2,
 									}}
 									onMouseEnter={(e) => {
-										e.currentTarget.style.boxShadow = `6px 6px 0px white`;
+										e.currentTarget.style.boxShadow = `8px 8px 0px white`;
 									}}
 									onMouseLeave={(e) =>
 										(e.currentTarget.style.boxShadow = "")()
 									}
 								>
-									<a href={social.link} target="_blank">
+									<a href={social.link} target="_blank" >
 										{social.icon}
 									</a>
 								</motion.div>

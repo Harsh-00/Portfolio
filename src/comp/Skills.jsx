@@ -5,7 +5,7 @@ import { icons, skill, skillColors } from "../assets";
 
 const Skills = () => {
 	return (
-		<div className="pt-20 my-16 mb-16 max-w-4xl mx-auto px-4 " id="skills">
+		<div className="pt-20 my-16 mb-16 max-w-4xl mx-auto px-4  " id="skills">
 			<div className="text-6xl w-fit mx-auto mb-12">Skills</div>
 			<motion.div
 				initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ const Skills = () => {
 					return (
 						<motion.div
 							key={idx}
-							className="text-lg border-white border-2 rounded-sm flex text-center justify-center items-center px-5 py-1  cursor-pointer select-none"
+							className="text-lg border-white border-2 rounded-sm flex text-center justify-center items-center px-5 py-1  cursor-pointer select-none max-xs:text-sm"
 							whileHover={{
 								scale: 1.1,
 							}}
