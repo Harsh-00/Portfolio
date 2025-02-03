@@ -23,13 +23,15 @@ import postgreSQL from "./tech/postgreSQL.png";
 import Sql from "./tech/SQL.png";
 import azure from "./tech/azure.png";
 import framer from "./tech/framer.svg";
+import FastAPI from "./tech/FastAPI.png";
+import docker from "./tech/docker.png";
 
 
 import project1 from "../assets/project-1.png";
-import project2 from "../assets/project-2.png";
-import project3 from "../assets/project-3.png";
-import project4 from "../assets/project-4.png";
-import { t } from "maath/dist/misc-19a3ec46.esm";
+import project2 from "../assets/project-2.png"; 
+import project3 from "../assets/project-3.png"; 
+
+export const Resume='https://shorturl.at/xLGvY';
 
 export {
 	menu,
@@ -57,6 +59,8 @@ export {
 	Sql,
 	azure,
 	framer,
+	FastAPI,
+	docker,
 };
 
 export const icons = [
@@ -68,6 +72,7 @@ export const icons = [
 	node,
 	express,
 	mongodb,
+	FastAPI,
 	materialui,
 	tailwindcss,
 	ds,
@@ -81,6 +86,7 @@ export const icons = [
 	github,
 	postgreSQL,
 	Sql,
+	docker,
 	azure,
 	framer,
 ];
@@ -94,6 +100,7 @@ export const skill = [
 	"NodeJS",
 	"ExpressJS",
 	"MongoDB",
+	"FastAPI",
 	"MaterialUI",
 	"TailwindCSS",
 	"Data Structures",
@@ -107,6 +114,7 @@ export const skill = [
 	"Github",
 	"postgreSQL",
 	"SQL",
+	"Docker",
 	"Azure",
 	"Framer Motion",
 ];
@@ -145,7 +153,7 @@ export const experience = [
 		type: "Remote",
         duration: "March 2024 - April 2024",
         desc: [
-            " • Enhanced the Enterprise Resource Planning (ERP) module by creating interactive and dynamic digital reports.",
+            " • Objective: Enhanced Enterprise Resource Planning (ERP) module by designing and integrating interactive reports, improving data accessibility and reduce manual efforts by 80%.",
             " • Designed complex SQL queries to manipulate data efficiently and integrated them into the ERP module to facilitate real-time data retrieval.",
             " • Tested and optimized these queries using pgAdmin before integration, reducing data retrieval times by 25%.",
             " • Designed and implemented advanced filtering features in the backend using query parameters, which enable users to filter data dynamically and reduce API call time by up to 50%.",
@@ -162,13 +170,22 @@ export const projects = [
 		image: `${project1}`,
 		tech: ["ReactJs", "NodeJs", "ExpressJs","TailwindCSS", "MongoDB","Stripe API","Azure" ],
 		description:
-			"Lists Mobile entries by retrieving data from the server. Implemented Server-side Dynamic Filtering logic enhances the user experience. Users can Add mobile entries, ensuring continuous updation to the Database.",
+			"To empower users with data-driven insights for choosing optimal mobile device through comprehensive, real-time comparative analysis. Developed a mobile device comparison feature comparing across 10+ key specifications, established data-driven purchase decisions and improved decision-making.",
 		github: "https://github.com/Harsh-00/Mobile_Ordering_front",
 		link: "https://thankful-hill-0e7a04d00.5.azurestaticapps.net/",
 	},
 	{
-		title: "Harsh's Blogs",
+		title: "Generic Inventory",
 		image: `${project2}`,
+		tech: ["FastApi", "Redis cloud", "Redis Stream", "Docker", "React", "Git"],
+		description:
+			"Built a scalable platform for real-time inventory management and product ordering using microservices architecture. Integrated Redis Streams for real-time communication b/w microservices and event-driven processing. Containerized the entire application using Docker Compose,",
+		github: "https://github.com/Harsh-00/Inventory_UI",
+		link: "https://github.com/Harsh-00/Inventory_UI",
+	},
+	{
+		title: "Harsh's Blogs",
+		image: `${project3}`,
 		tech: ["React", "ContextAPI", "TailwindCSS"],
 		description:
 			"Blog website that integrates an external API to fetch data. The implementation of a pagination feature ensures organized presentation. Use Context API for efficient State Management. Users can explore content category-wise or based on tags.",

@@ -8,10 +8,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
 	const socials = [
-		{
-			icon: <FaXTwitter />,
-			link: "https://twitter.com/Harsh_Agarwal00",
-		},
+		
 		{
 			icon: <FaLinkedinIn />,
 			link: "https://www.linkedin.com/in/iharsh-agarwal/",
@@ -23,6 +20,10 @@ const About = () => {
 		{
 			icon: <IoIosMail />,
 			link: "mailto:2021kucp1011@iiitkota.ac.in",
+		},
+		{
+			icon: <FaXTwitter />,
+			link: "https://twitter.com/Harsh_Agarwal00",
 		},
 	];
 
