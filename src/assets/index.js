@@ -31,7 +31,7 @@ import project1 from "../assets/project-1.png";
 import project2 from "../assets/project-2.png"; 
 import project3 from "../assets/project-3.png"; 
 
-export const Resume='https://shorturl.at/xLGvY';
+export const Resume='https://shorturl.at/UjE98';
 
 export {
 	menu,
